@@ -1,27 +1,27 @@
 <html>
-    <script>
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.addEventListener("load", function (event) {
+  <script>
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.addEventListener("load", function (event) {
+  
+      const meeting = new VideoSDKMeeting();
       
-          const meeting = new VideoSDKMeeting();
-
-          const config = {
-            name: "Type Name",
-            apiKey: "0d924f05-2cbe-4273-a5a7-af376aa42fe8", 
-            meetingId:"GUPSHAP", 
-            redirectOnLeave: "kwitter_room.html",
-            micEnabled: true,
-            webcamEnabled: true,
-            participantCanToggleSelfWebcam: true,
-            participantCanToggleSelfMic: true,
-            joinScreen: {
-              visible: true, // Show the join screen ?
-              title: "GupShap Meeting", // Meeting title
-              meetingUrl: window.location.href, // Meeting joining url
-            },
-            screenShareEnabled: true,
-            recordingEnabled: true,
+      const config = {
+        name: localStorage.getItem("new_user"),
+        apiKey: "0d924f05-2cbe-4273-a5a7-af376aa42fe8", 
+        meetingId: "SOCIAL_DEMO", 
+        redirectOnLeave: "kwitter_room.html",
+        micEnabled: true,
+        webcamEnabled: true,
+        participantCanToggleSelfWebcam: true,
+        participantCanToggleSelfMic: true,
+        joinScreen: {
+          visible: true, // Show the join screen ?
+          title: "GupShap Meeting", // Meeting title
+          meetingUrl: window.location.href, // Meeting joining url
+        },
+        screenShareEnabled: true,
+        recordingEnabled: true,
 recordingWebhookUrl: "yourwebsite.com/callback",
 permissions: {
     toggleRecording: true,
@@ -39,14 +39,15 @@ pin: {
   allowed: true,
   layout: "SPOTLIGHT",
 },
-          };
-          
-          meeting.init(config);
-        });
+      };
       
-        script.src = "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.29/rtc-js-prebuilt.js";
-        document.getElementsByTagName("head")[0].appendChild(script);
-      
-      </script>
+      meeting.init(config);
+    });
+  
+    script.src = "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.29/rtc-js-prebuilt.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  
+  </script>
+        
             
 </html>
