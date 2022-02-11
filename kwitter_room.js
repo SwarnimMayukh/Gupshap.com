@@ -48,5 +48,5 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
 getData();
 
 function join() {
-      window.location = "callstart.html";
+      window.location = "call.html";
 }
