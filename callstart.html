@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label >Meeting Code:</label>
+    <input id="meeting" type="text" class="form-control" placeholder="Type meeting code to create a meeting or to join a meeting.">
+  </div>
+  <button id="meetingbutton" class="btn btn-primary" onclick="code()">Join.</button>
+  <br><br>
+  <script>
+      function code() {
+          codes = document.getElementById("meeting").value;
+          localStorage.setItem("meeting", codes);
+    window.location = "call.html";
+      }
+  </script>

@@ -45,4 +45,7 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
       function support() {
             window.location = "support.html";
       }
+      function join() {
+            window.location = "callstart.html";
+      }
 getData();
