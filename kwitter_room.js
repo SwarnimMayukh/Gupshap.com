@@ -48,5 +48,5 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
 getData();
 
 function join() {
-      window.location = "delay.html";
+      window.location = "https://swarnimmayukh.github.io/GupShap-Meeting/";
 }
