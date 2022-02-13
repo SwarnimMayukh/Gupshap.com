@@ -62,7 +62,7 @@ function updateLike(message_id)
  function log_out() {
        localStorage.removeItem("new_user");
        localStorage.removeItem("room_name");
-       window.location.replace("index.html");
+       window.location.replace("thanks.html");
  }
 
  function support() {

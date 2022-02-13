@@ -40,7 +40,7 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
       function log_out() {
             localStorage.removeItem("new_user");
             localStorage.removeItem("room_name");
-            window.location = "index.html";
+            window.location = "thanks.html";
       }
       function support() {
             window.location = "support.html";
@@ -50,3 +50,10 @@ getData();
 function join() {
       window.location = "https://swarnimmayukh.github.io/GupShap-Meeting/";
 }
+setTimeout(function() {
+      review_reminder.style.display = "block";
+      document.getElementById("review_reminder").innerHTML;
+      setTimeout(function() {
+            review_reminder.style.display = "none";
+      },2500);
+},2000);
